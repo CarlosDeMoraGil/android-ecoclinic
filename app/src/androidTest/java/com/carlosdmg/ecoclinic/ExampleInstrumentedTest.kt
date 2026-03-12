@@ -1,4 +1,4 @@
-package com.carlosdmg.android_ecoclinic
+package com.carlosdmg.ecoclinic
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

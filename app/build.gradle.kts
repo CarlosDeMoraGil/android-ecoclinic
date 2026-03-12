@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.carlosdmg.android_ecoclinic"
+    namespace = "com.carlosdmg.ecoclinic"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
