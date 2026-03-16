@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/informationFragment">
+
+    <fragment
+        android:id="@+id/informationFragment"
+        android:label="InformationFragment"
+        android:name="com.carlosdmg.ecoclinic.feature.information.presentation.InformationFragment"
+        tools:layout="@layout/fragment_information"
+        />
+
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:label="AppointmentFragment"
+        android:name="com.carlosdmg.ecoclinic.feature.appointment.presentation.AppointmentFragment"
+        tools:layout="@layout/fragment_appointment"
+        />
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:label="UserFragment"
+        android:name="com.carlosdmg.ecoclinic.feature.user.presentation.UserFragment"
+        tools:layout="@layout/fragment_user"
+        />
+
+</navigation>
