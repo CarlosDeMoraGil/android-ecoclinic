@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginVertical="@dimen/space_s"
+            android:contentDescription="@string/clinic_logo"
             android:src="@drawable/img_title"/>
 
     </com.google.android.material.appbar.MaterialToolbar>
