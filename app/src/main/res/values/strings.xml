@@ -10,5 +10,16 @@
     <string name="fragment_appointments_title">Citas</string>
     <string name="fragment_user_profile_title">Usuario</string>
 
+    <!-- 2. Information Screen -->
+    <string name="in_fr_header">Consulta de ecografía y medicina general de la doctora Isabel Gil Carrera</string>
+    <string name="in_fr_whoami">¿Quien soy?</string>
+    <string name="in_fr_whoami_description">Sea bienvenid@ a mi consulta. Soy la Dra. Isabel Gil Carrera, médica de familia. Ofrezco una atención cercana y personalizada, combinando la consulta médica con ecografías diagnósticas para un mejor seguimiento de tu salud. Mi objetivo es acompañarte de forma clara, accesible y de confianza en cada etapa.</string>
+    <string name="in_fr_contact">Contacto</string>
+    <string name="in_fr_contact_detail">Se atiende mediante cita previa, concretada a traves de el telefono, correo electronico o esta misma app.</string>
+    <string name="in_fr_contact_info"><b>Telefono:</b> 640 29 26 14 \n<b>Correo electronico:</b> igecografias@gmail.com</string>
+    <string name="in_fr_location">Ubicación</string>
+    <string name="in_fr_location_detail">Me encuentro en, <b>Ctra. Casillas, 6, Planta 1 – Local 5, 05420 Sotillo de la Adrada, Ávila, España.</b></string>
+    <string name="title_activity_maps">MapsActivity</string>
+
 
 </resources>
