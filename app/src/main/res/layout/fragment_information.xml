@@ -22,6 +22,7 @@
                 style="@style/AppHeadline"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_m"
                 android:text="@string/in_fr_header"
                 app:layout_constraintBottom_toTopOf="@id/in_fr_whoami"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -75,28 +76,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/in_fr_divider_1" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/in_fr_phone_button"
-                style="@style/Widget.Material3.Button.IconButton"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginHorizontal="@dimen/image_xs"
-                app:icon="@drawable/ic_phone"
-                app:layout_constraintBottom_toBottomOf="@+id/in_fr_contact"
-                app:layout_constraintEnd_toStartOf="@id/in_fr_mail_button"
-                app:layout_constraintTop_toTopOf="@+id/in_fr_contact"
-                app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/in_fr_mail_button"
-                style="@style/Widget.Material3.Button.IconButton"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                app:icon="@drawable/ic_mail"
-                app:layout_constraintBottom_toBottomOf="@+id/in_fr_contact"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/in_fr_contact"
-                app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/in_fr_contact_detail"
@@ -157,5 +136,21 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/in_fr_phone_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/md_theme_primaryContainer"
+        android:text="@string/in_fr_call_now"
+        android:layout_marginStart="@dimen/space_m"
+        android:layout_marginBottom="@dimen/space_s"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_phone"
+        app:iconGravity="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
