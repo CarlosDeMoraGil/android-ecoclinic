@@ -16,7 +16,7 @@ class NavIntent (private val context: Context) {
             }
             context.startActivity(intent)
         } catch (e: Exception) {
-            Log.d("@dev", context.getString(R.string.app_intent_error))
+            Log.d("@dev", context.getString(R.string.app_intent_error) + e)
         }
     }
 

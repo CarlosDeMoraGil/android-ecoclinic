@@ -6,7 +6,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/ex_zero"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -14,13 +14,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/ex_zero"
             android:layout_marginHorizontal="@dimen/space_m">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/in_fr_header"
                 style="@style/AppHeadline"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/ex_zero"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_m"
                 android:text="@string/in_fr_header"
@@ -49,19 +49,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/in_fr_whoami" />
 
-            <ImageView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/in_fr_image"
-                android:layout_width="152dp"
-                android:layout_height="192dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_isabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/space_xs"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/in_fr_whoami_description" />
+                app:layout_constraintTop_toTopOf="@id/in_fr_whoami_description"
+                app:strokeColor="@color/md_theme_outlineVariant"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    android:layout_width="155dp"
+                    android:layout_height="195dp"
+                    android:contentDescription="TODO"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_isabel" />
+
+            </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/in_fr_divider_1"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/ex_mininum"
                 android:layout_marginVertical="@dimen/space_m"
                 app:dividerColor="@color/md_theme_primaryContainer"
                 app:layout_constraintTop_toBottomOf="@id/in_fr_image" />
@@ -100,7 +110,7 @@
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/in_fr_divider_2"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/ex_mininum"
                 android:layout_marginVertical="@dimen/space_m"
                 app:dividerColor="@color/md_theme_primaryContainer"
                 app:layout_constraintTop_toBottomOf="@id/in_fr_contact_info" />
@@ -125,13 +135,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/in_fr_location" />
 
-            <include
-                layout="@layout/activity_maps"
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="@dimen/ex_xxxxl"
                 android:layout_marginVertical="@dimen/space_m"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/in_fr_location_detail" />
+                app:layout_constraintTop_toBottomOf="@id/in_fr_location_detail">
+
+                <include
+                    layout="@layout/activity_maps"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ex_xxxxl" />
+
+            </com.google.android.material.card.MaterialCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -141,10 +157,10 @@
         android:id="@+id/in_fr_phone_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_m"
+        android:layout_marginBottom="@dimen/ex_xxs"
         android:backgroundTint="@color/md_theme_primaryContainer"
         android:text="@string/in_fr_call_now"
-        android:layout_marginStart="@dimen/space_m"
-        android:layout_marginBottom="@dimen/space_s"
         android:textAllCaps="false"
         android:textStyle="bold"
         app:icon="@drawable/ic_phone"
