@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/informationFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_office"
+        android:title="@string/fragment_information_title"
+        />
+
+    <item
+        android:id="@+id/appointmentFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_appointment"
+        android:title="@string/fragment_appointments_title" />
+
+    <item
+        android:id="@+id/userFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_user"
+        android:title="@string/fragment_user_profile_title" />
+
+</menu>

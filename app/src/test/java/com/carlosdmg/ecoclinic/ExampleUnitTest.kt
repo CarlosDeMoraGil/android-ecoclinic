@@ -1,4 +1,4 @@
-package com.carlosdmg.android_ecoclinic
+package com.carlosdmg.ecoclinic
 
 import org.junit.Test
 

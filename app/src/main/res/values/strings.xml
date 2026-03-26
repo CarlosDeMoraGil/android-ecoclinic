@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">android-ecoclinic</string>
+
+    <!-- O. APP NAME -->
+    <string name="app_name">ecoclinic</string>
+    <string name="clinic_logo">Logo clínica</string>
+
+
+    <!-- 1. Fragments names -->
+    <string name="fragment_information_title">Información</string>
+    <string name="fragment_appointments_title">Citas</string>
+    <string name="fragment_user_profile_title">Usuario</string>
+
+
 </resources>
