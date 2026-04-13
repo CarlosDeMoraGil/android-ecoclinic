@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Extra sizes -->
+    <dimen name="ex_zero">0dp</dimen>
+    <dimen name="ex_mininum">1dp</dimen>
+    <dimen name="ex_xxs">10dp</dimen>
+    <dimen name="ex_xxxxl">200dp</dimen>
+
+
     <!-- Image sizes -->
     <dimen name="image_xs">16dp</dimen>
     <dimen name="image_s">24dp</dimen>
