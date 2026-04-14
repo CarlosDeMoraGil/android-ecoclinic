@@ -51,10 +51,6 @@ dependencies {
 
     implementation(libs.play.services.maps)
 
-    implementation(libs.koin.boom)
-    implementation(libs.koin.android)
-    implementation(libs.koin.annotations)
-
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.junit)
