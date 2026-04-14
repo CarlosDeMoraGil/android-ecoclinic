@@ -1,5 +1,5 @@
 [versions]
-agp = "8.9.3"
+agp = "8.9.1"
 coreKtx = "1.18.0"
 junit = "4.13.2"
 junitVersion = "1.3.0"
@@ -14,11 +14,11 @@ navigationComponent = "2.9.7"
 googleAndroidLibrariesMapsplatformSecretsGradlePlugin = "2.0.1"
 playServicesMaps = "20.0.0"
 
-koin-boom = "4.2.1"
-koin-annotations = "4.2.1"
-ksp-version = "2.0.21-1.0.26"
+koin-boom = "4.0.0"
+koin-annotations = "1.4.0"
+ksp-version = "2.0.0-1.0.22"
 
-kotlin = "2.3.20"
+kotlin = "2.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
