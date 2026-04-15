@@ -10,5 +10,13 @@ Aplicación Android para la gestión de una consulta de medicina general y ecogr
 ## 🎨 Design
 Diseño hecho en Figma.
 
+## 🏢 Business
+
+[Consulta de ecografía y medicina general de Isabel Gil Carrera](https://castillayleonshopping.es/negocios/dra-isabel-gil-carrera-avila/)
+
 ## 👨‍💻 Author
-Carlos
+
+> Miembros
+>>
+>> *[Carlos de Mora Gil](https://github.com/CarlosDeMoraGil)*
+>>
