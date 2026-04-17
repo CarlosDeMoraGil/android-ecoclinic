@@ -3,9 +3,7 @@ plugins {
     alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
     alias(libs.plugins.google.services)
-
 }
 
 android {
@@ -67,7 +65,7 @@ dependencies {
     implementation(libs.play.services.maps)
 
     implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.firestore)
 
     testImplementation(libs.junit)
 

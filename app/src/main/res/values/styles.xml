@@ -3,7 +3,7 @@
 
     <!-- Commons Component -->
     <style name="AppHeadline" parent="TextAppearance.Material3.BodyMedium">
-        <item name="android:textColor">@color/md_theme_onSurface</item>
+        <item name="android:textColor">@color/md_theme_onSurface_headline</item>
         <item name="android:textStyle">bold</item>
     </style>
 

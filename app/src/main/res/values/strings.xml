@@ -25,5 +25,9 @@
     <!-- 3. App Messages -->
     <string name="app_intent_error">No hay aplicaciones disponibles</string>
 
+    <!-- 4. Appointments Screen -->
+    <string name="appt_fr_headline">¡Vaya! Parece que no tienes ninguna cita agendada...</string>
+    <string name="appt_fr_details">No te preocupes puedes agendar una cita en el boton en la parte inferior central de la pantalla o puedes pulsar Agendar cita.</string>
+    <string name="appt_fr_button">Agendar cita</string>
 
 </resources>

@@ -16,13 +16,14 @@ playServicesMaps = "20.0.0"
 
 koin-boom = "4.0.0"
 koin-annotations = "1.4.0"
-ksp-version = "2.0.0-1.0.22"
+ksp-version = "2.1.0-1.0.29"
 
-kotlin = "2.0.0"
+kotlin = "2.1.0"
 
 firebaseBom = "34.11.0"
 googleServices = "4.4.2"
 
+koin-ksp-version = "1.4.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -41,9 +42,9 @@ play-services-maps = { group = "com.google.android.gms", name = "play-services-m
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-boom" }
 koin-android = { module = "io.insert-koin:koin-android" }
 koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
-koin-ksp = { group = "io.insert-koin", name = "koin-ksp-compiler", version.ref = "koin-annotations" }
+koin-ksp = { group = "io.insert-koin", name = "koin-ksp-compiler", version.ref = "koin-ksp-version" }
 
-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 
 [plugins]

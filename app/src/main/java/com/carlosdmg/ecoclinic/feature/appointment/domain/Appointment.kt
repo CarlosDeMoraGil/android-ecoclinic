@@ -1,9 +1,11 @@
 package com.carlosdmg.ecoclinic.feature.appointment.domain
 
+import com.google.firebase.Timestamp
+
 data class Appointment (
-    private val id: String,
-    private val details: String,
-    private val timestamp: String,
-    private val patient: Patient
+    val id: String,
+    val details: String,
+    val timestamp: String,
+    val patientId: String
 ) {
 }

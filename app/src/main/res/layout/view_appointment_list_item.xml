@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/appt_vw_header"
+        style="@style/AppHeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cita con la Dra Isabel Gil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/appt_vw_type"
+        style="@style/AppSupportingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/space_s"
+        android:text="Tipo de consulta: "
+        app:layout_constraintBottom_toTopOf="@id/appt_vw_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appt_vw_header" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/appt_vw_timestamp"
+        style="@style/AppSupportingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/space_s"
+        android:text="Fecha y hora: "
+        app:layout_constraintBottom_toTopOf="@id/appt_vw_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appt_vw_type" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/appt_vw_details"
+        style="@style/AppSupportingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalles: "
+        app:layout_constraintBottom_toTopOf="@id/appt_vw_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appt_vw_timestamp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/appt_vw_type_data"
+        style="@style/TextAppearance.Material3.LabelMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/space_s"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/appt_vw_type"
+        app:layout_constraintStart_toEndOf="@id/appt_vw_type"
+        app:layout_constraintTop_toTopOf="@id/appt_vw_type" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/appt_vw_timestamp_data"
+        style="@style/TextAppearance.Material3.LabelMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/space_s"
+        app:layout_constraintBottom_toTopOf="@id/appt_vw_details"
+        app:layout_constraintStart_toEndOf="@id/appt_vw_timestamp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/appt_vw_details_data"
+        style="@style/TextAppearance.Material3.LabelMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/appt_vw_details"
+        app:layout_constraintStart_toEndOf="@id/appt_vw_details" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/appt_vw_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ex_mininum"
+        android:layout_marginVertical="@dimen/space_s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appt_vw_details"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
