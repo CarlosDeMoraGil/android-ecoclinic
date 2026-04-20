@@ -6,6 +6,7 @@ data class AppointmentDbModel(
     val id: String = "",
     val details: String = " ",
     val timestamp: Timestamp = Timestamp.now(),
-    val patientId: String = " "
+    val patientId: String = " ",
+    val type: String = " "
 ) {
 }

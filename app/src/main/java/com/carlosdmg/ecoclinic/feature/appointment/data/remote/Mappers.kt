@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 
 fun AppointmentDbModel.toModel(): Appointment {
-    return Appointment(this.id, this.details, formatFirestoreDate(this.timestamp), this.patientId)
+    return Appointment(this.id, this.details, formatFirestoreDate(this.timestamp), this.patientId, this.type)
 }
 
 

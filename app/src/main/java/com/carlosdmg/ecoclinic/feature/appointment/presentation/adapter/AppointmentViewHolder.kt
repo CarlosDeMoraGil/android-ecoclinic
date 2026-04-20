@@ -10,7 +10,7 @@ class AppointmentViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val binding = ViewAppointmentListItemBinding.bind(view)
     fun bind(item: Appointment) {
         binding.apply {
-            apptVwTypeData.text = item.details
+            apptVwTypeData.text = item.type
             apptVwTimestampData.text = item.timestamp
             apptVwDetailsData.text = item.details
         }

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.carlosdmg.ecoclinic.R
 import com.carlosdmg.ecoclinic.databinding.FragmentAppointmentBinding
 import com.carlosdmg.ecoclinic.feature.appointment.domain.Appointment
 import com.carlosdmg.ecoclinic.feature.appointment.presentation.adapter.AppointmentAdapter
@@ -58,6 +59,7 @@ class AppointmentFragment : Fragment() {
             )
             appointmentAdapter = AppointmentAdapter()
             apptFrRecyclerView.adapter = appointmentAdapter
+            apptFrToolbar.toolbar.title = getString(R.string.in_fr_toolbar_title)
         }
     }
 
