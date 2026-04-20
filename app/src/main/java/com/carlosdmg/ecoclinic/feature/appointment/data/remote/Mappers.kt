@@ -13,7 +13,8 @@ fun AppointmentDbModel.toModel(): Appointment {
 fun formatFirestoreDate(timestamp: Timestamp): String {
     val date = timestamp.toDate()
 
-    val sdf = SimpleDateFormat("dd 'de' MMMM 'de' yyyy 'a las' HH:mm", Locale("es", "ES"))
+    val locale = Locale.forLanguageTag("es-ES")
+    val sdf = SimpleDateFormat("dd 'de' MMMM 'de' yyyy 'a las' HH:mm", locale)
 
     return sdf.format(date)
 }

@@ -1,7 +1,5 @@
 package com.carlosdmg.ecoclinic.feature.appointment.domain
 
-import com.google.firebase.Timestamp
-
 data class Appointment (
     val id: String,
     val details: String,

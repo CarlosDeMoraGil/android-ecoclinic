@@ -99,7 +99,7 @@
                 android:insetTop="@dimen/ex_zero"
                 android:insetBottom="@dimen/ex_zero"
                 android:text="@string/appt_vw_cancel"
-                android:textSize="@dimen/ex_xxs"
+                android:textSize="@dimen/text_xs"
                 android:textAllCaps="false"
                 android:textColor="@color/md_theme_onSurface"
                 app:layout_constraintBottom_toBottomOf="parent"
