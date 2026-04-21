@@ -1,16 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/text_xxl"
-        android:text="@string/fragment_appointments_title"
+    <include
+        android:id="@+id/appt_fr_toolbar"
+        layout="@layout/view_detail_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/appt_fr_recycler_view"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appt_fr_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/space_m"
+        tools:itemCount="2"
+        tools:listitem="@layout/view_appointment_list_item"
+        app:layout_constraintTop_toBottomOf="@id/appt_fr_toolbar"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/appt_fr_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_m"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/md_theme_primaryContainer_v3"
+        app:cardCornerRadius="@dimen/space_m"
+        app:cardElevation="@dimen/ex_xxs"
+        app:layout_constraintTop_toBottomOf="@id/appt_fr_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_m">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/appt_fr_headline"
+                style="@style/AppHeadline"
+                android:layout_width="@dimen/ex_xxxxl"
+                android:layout_height="wrap_content"
+                android:text="@string/appt_fr_headline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/appt_fr_details"
+                style="@style/AppSupportingText"
+                android:layout_width="@dimen/ex_xxxxl"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/space_m"
+                android:text="@string/appt_fr_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appt_fr_headline" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/in_fr_phone_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/image_m"
+                android:backgroundTint="@color/md_theme_primaryContainer"
+                android:insetTop="@dimen/ex_zero"
+                android:insetBottom="@dimen/ex_zero"
+                android:text="@string/appt_fr_button"
+                android:textAllCaps="false"
+                android:textColor="@color/md_theme_onSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent"
+                app:strokeColor="@color/md_theme_primaryContainer_v2"
+                app:strokeWidth="@dimen/ex_mininum" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="@dimen/space_m"
+        android:backgroundTint="@color/md_theme_primaryContainer"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="@dimen/image_s"
+        app:iconTint="@color/md_theme_onSurface"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent"
+        app:strokeColor="@color/md_theme_primaryContainer_v2"
+        app:strokeWidth="@dimen/ex_mininum" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

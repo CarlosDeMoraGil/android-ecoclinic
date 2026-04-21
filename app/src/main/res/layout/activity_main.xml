@@ -7,10 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.carlosdmg.ecoclinic.MainActivity">
 
-    <include
-        android:id="@+id/mm_main_toolbar"
-        layout="@layout/view_main_toolbar" />
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -20,7 +16,7 @@
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mm_main_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

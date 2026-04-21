@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -29,20 +30,18 @@ android {
         }
     }
 
-    // Cambiado a Java 17 para compatibilidad con AGP 8.x y KSP
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    // Esto unifica el target de Kotlin y KSP a Java 17
     kotlin {
         jvmToolchain(17)
     }
 
     buildFeatures {
         viewBinding = true
-        buildConfig = true // Activa esta opción para quitar los warnings de buildConfigFields
+        buildConfig = true
     }
 }
 
@@ -62,6 +61,11 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.koin.annotations)
     ksp(libs.koin.ksp)
+
+    implementation(libs.play.services.maps)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.firestore)
 
     testImplementation(libs.junit)
 
