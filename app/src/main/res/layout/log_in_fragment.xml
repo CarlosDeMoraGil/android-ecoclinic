@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:contentDescription="@string/clinic_logo"
             android:src="@drawable/img_title" />
 
     </com.google.android.material.card.MaterialCardView>
@@ -36,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/space_m"
             android:gravity="center"
-            android:text="¡Bienvenido! Inicia sesión o crea tu cuenta para continuar!"
+            android:text="@string/log_fr_welcome"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/space_m"
-            android:text="¡Inicia Sesión!"
+            android:text="@string/log_fr_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/log_fr_headline" />
@@ -58,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/space_m"
-            android:text="Correo electrónico"
+            android:text="@string/log_fr_email"
             app:layout_constraintStart_toStartOf="@id/log_fr_edit_email"
             app:layout_constraintTop_toBottomOf="@id/log_fr_login" />
 
@@ -68,8 +69,9 @@
             android:layout_height="@dimen/space_xl"
             android:layout_marginTop="@dimen/space_xs"
             android:background="@drawable/bg_edittext_rounded"
-            android:hint="example@gmail.com"
+            android:hint="@string/log_fr_email_hint"
             android:paddingStart="@dimen/ex_xxs"
+            android:paddingEnd="@dimen/ex_xxs"
             android:textColorHint="@color/md_theme_outlineVariant"
             android:textSize="@dimen/text_xs"
             app:layout_constraintBottom_toTopOf="@id/log_fr_passwd"
@@ -83,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/space_m"
-            android:text="Contraseña"
+            android:text="@string/log_fr_password"
             app:layout_constraintStart_toStartOf="@id/log_fr_edit_email"
             app:layout_constraintTop_toBottomOf="@id/log_fr_edit_email" />
 
@@ -114,7 +116,7 @@
                 android:backgroundTint="@color/md_theme_background"
                 android:insetTop="@dimen/ex_zero"
                 android:insetBottom="@dimen/ex_zero"
-                android:text="Regístrate"
+                android:text="@string/log_fr_singup"
                 android:textAllCaps="false"
                 android:textColor="@color/md_theme_onSurface"
                 android:textSize="@dimen/text_xs"
@@ -133,7 +135,7 @@
                 android:backgroundTint="@color/md_theme_primaryContainer"
                 android:insetTop="@dimen/ex_zero"
                 android:insetBottom="@dimen/ex_zero"
-                android:text="Iniciar Sesión"
+                android:text="@string/log_fr_log_in"
                 android:textAllCaps="false"
                 android:textColor="@color/md_theme_onSurface"
                 android:textSize="@dimen/text_xs"
@@ -153,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/space_m"
-            android:text="¿Olvidaste tu contraseña?"
+            android:text="@string/log_fr_forgotten"
             android:textColor="@color/md_theme_primaryContainer"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

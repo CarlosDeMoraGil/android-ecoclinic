@@ -36,4 +36,14 @@
     <string name="appt_vw_type">Tipo de consulta:\u0020</string>
     <string name="in_fr_toolbar_title">Citas</string>
 
+    <!-- 5. Log in Screen -->
+    <string name="log_fr_welcome">¡Bienvenido! Inicia sesión o crea tu cuenta para continuar!</string>
+    <string name="log_fr_login">¡Inicia Sesión!</string>
+    <string name="log_fr_email">Correo electrónico</string>
+    <string name="log_fr_email_hint">example@gmail.com</string>
+    <string name="log_fr_password">Contraseña</string>
+    <string name="log_fr_singup">Regístrate</string>
+    <string name="log_fr_log_in">Iniciar Sesión</string>
+    <string name="log_fr_forgotten">¿Olvidaste tu contraseña?</string>
+
 </resources>
