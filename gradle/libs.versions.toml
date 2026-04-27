@@ -20,10 +20,12 @@ ksp-version = "2.1.0-1.0.29"
 
 kotlin = "2.1.0"
 
-firebaseBom = "34.11.0"
+firebaseBom = "34.12.0"
 googleServices = "4.4.2"
 
 koin-ksp-version = "1.4.0"
+credentials = "1.3.0"
+googleid = "1.1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,9 +45,15 @@ koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-boom" }
 koin-android = { module = "io.insert-koin:koin-android" }
 koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
 koin-ksp = { group = "io.insert-koin", name = "koin-ksp-compiler", version.ref = "koin-ksp-version" }
-
 firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
+androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
+androidx-credentials-play-services-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentials" }
+googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -55,4 +63,4 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp-version" }
 
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
 
-
+navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigationComponent" }

@@ -6,6 +6,7 @@
     <dimen name="ex_mininum">1dp</dimen>
     <dimen name="ex_xxs">10dp</dimen>
     <dimen name="ex_xxxxl">200dp</dimen>
+    <dimen name="ex_xxxxxl">400dp</dimen>
 
 
     <!-- Image sizes -->

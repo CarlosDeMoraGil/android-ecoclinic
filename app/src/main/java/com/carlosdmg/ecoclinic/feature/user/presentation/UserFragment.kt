@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.carlosdmg.ecoclinic.databinding.FragmentUserBinding
+import com.carlosdmg.ecoclinic.databinding.LogInFragmentBinding
 
 class UserFragment : Fragment() {
 
-    private var _binding: FragmentUserBinding? = null
+    private var _binding: LogInFragmentBinding? = null
     private val binding get() = _binding!!
 
 
@@ -18,7 +19,7 @@ class UserFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentUserBinding.inflate(inflater, container, false)
+        _binding = LogInFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 

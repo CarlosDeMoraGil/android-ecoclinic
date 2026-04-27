@@ -23,7 +23,7 @@
         android:id="@+id/userFragment"
         android:label="UserFragment"
         android:name="com.carlosdmg.ecoclinic.feature.user.presentation.UserFragment"
-        tools:layout="@layout/fragment_user"
+        tools:layout="@layout/log_in_fragment"
         />
 
 </navigation>
