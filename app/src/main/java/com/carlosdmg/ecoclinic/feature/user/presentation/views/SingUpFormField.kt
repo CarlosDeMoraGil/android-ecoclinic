@@ -30,6 +30,4 @@ class SingUpFormField @JvmOverloads constructor(
 
     fun getText() = binding.formVwEdittext.text.toString()
 
-    fun setColorError() = binding.formVwTitle.setTextColor(context.getColor(R.color.md_theme_error))
-
 }

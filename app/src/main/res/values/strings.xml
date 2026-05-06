@@ -55,5 +55,7 @@
     <string name="singup_fr_password_auth_hint">Repetir contraseña</string>
     <string name="singup_fr_button">Continuar</string>
     <string name="singup_fr_goback">Tengo cuenta</string>
+    <string name="singup_fr_passwd_error">Las contraseñas no coinciden*</string>
+    <string name="singup_fr_user_error">El usuario ya existe</string>
 
 </resources>

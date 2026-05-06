@@ -4,7 +4,6 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import org.koin.core.annotation.Single
 
-@Single
 class FirebaseAuthentication {
 
     private val auth = FirebaseAuth.getInstance()

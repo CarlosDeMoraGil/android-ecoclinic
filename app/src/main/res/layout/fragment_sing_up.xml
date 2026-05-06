@@ -109,7 +109,7 @@
             android:id="@+id/sinup_fr_error_passwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Las contraseñas no coinciden*"
+            android:text="@string/singup_fr_passwd_error"
             android:visibility="gone"
             android:textColor="@color/md_theme_error"
             app:layout_constraintBottom_toBottomOf="parent"

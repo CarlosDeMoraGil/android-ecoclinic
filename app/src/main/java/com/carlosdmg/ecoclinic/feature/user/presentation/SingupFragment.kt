@@ -1,7 +1,6 @@
 package com.carlosdmg.ecoclinic.feature.user.presentation
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -53,11 +52,7 @@ class SingupFragment : Fragment() {
 
     private fun singup() {
         binding.apply {
-            val credentials = ArrayList<String>()
 
-            val name = singupFrNameEdit.text.toString()
-            val surname = singupFrSurnameEdit.getText()
-            val address = singupFrAddressEdit.getText()
             val email = singupFrEmailEdit.getText()
             val passwd = singupFrPasswdEdit.getText()
             val passwdAuth = singupFrPasswdAuthEdit.getText()
@@ -71,18 +66,17 @@ class SingupFragment : Fragment() {
                 firebaseAuth.createUser(email, passwd) { result ->
 
                     result.onSuccess {
-                        findNavController().navigateUp()
-
+                        navigateUp()
                     }
 
                     result.onFailure { error ->
 
                         when (error) {
                             is FirebaseAuthUserCollisionException -> {
-                                Toast.makeText(requireContext(), "El usuario ya existe", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(requireContext(), context?.getString(R.string.singup_fr_user_error), Toast.LENGTH_SHORT).show()
                             }
                             else -> {
-                                Toast.makeText(requireContext(), "Error: ${error.message}", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(requireContext(), "${error.message}", Toast.LENGTH_SHORT).show()
                             }
                         }
                     }
