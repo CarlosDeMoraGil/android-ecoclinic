@@ -46,4 +46,14 @@
     <string name="log_fr_log_in">Iniciar Sesión</string>
     <string name="log_fr_forgotten">¿Olvidaste tu contraseña?</string>
 
+    <!-- 6. Sing up Screen -->
+    <string name="singup_fr_headline">Rellena la siguiente información para poder registrarte.</string>
+    <string name="singup_fr_name">Nombre</string>
+    <string name="singup_fr_surname">Apellidos</string>
+    <string name="singup_fr_address">Dirección Postal</string>
+    <string name="singup_fr_address_hint">Nombre de vía, número y portal</string>
+    <string name="singup_fr_password_auth_hint">Repetir contraseña</string>
+    <string name="singup_fr_button">Continuar</string>
+    <string name="singup_fr_goback">Tengo cuenta</string>
+
 </resources>

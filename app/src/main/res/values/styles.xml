@@ -31,5 +31,13 @@
         <item name="cornerSizeTopRight">@dimen/ex_zero</item>
     </style>
 
+    <style name="CustomEditText">
+        <item name="android:layout_marginTop">@dimen/space_xs</item>
+        <item name="android:background">@drawable/bg_edittext_rounded</item>
+        <item name="android:paddingStart">@dimen/ex_xxs</item>
+        <item name="android:paddingEnd">@dimen/ex_xxs</item>
+        <item name="android:textColorHint">@color/md_theme_outlineVariant</item>
+        <item name="android:textSize">@dimen/text_xs</item>
+    </style>
 
 </resources>
