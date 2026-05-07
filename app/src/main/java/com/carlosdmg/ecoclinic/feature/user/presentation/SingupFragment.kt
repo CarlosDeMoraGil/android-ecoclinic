@@ -107,7 +107,7 @@ class SingupFragment : Fragment() {
     }
 
     private fun navigateToLogin() {
-        findNavController().navigate(SingupFragmentDirections.actionSingupFragmentToUserFragment(null))
+        findNavController().navigate(SingupFragmentDirections.actionSingupFragmentToUserFragment())
     }
 
 

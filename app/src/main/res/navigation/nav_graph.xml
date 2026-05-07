@@ -27,12 +27,6 @@
             android:id="@+id/action_userFragment_to_singupFragment"
             app:destination="@id/singupFragment" />
 
-        <argument
-            app:argType="com.carlosdmg.ecoclinic.feature.user.domain.User"
-            android:name="user"
-            app:nullable="true"/>
-
-
     </fragment>
 
     <fragment
