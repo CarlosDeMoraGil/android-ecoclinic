@@ -1,5 +1,6 @@
 package com.carlosdmg.ecoclinic.app.data
 
+import android.util.Log
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import org.koin.core.annotation.Single
@@ -8,6 +9,11 @@ import org.koin.core.annotation.Single
 class FirebaseAuthentication {
 
     private val auth = FirebaseAuth.getInstance()
+
+    fun getCurrentUserId(): String {
+        return auth.currentUser?.uid.toString()
+    }
+
 
     fun createUser(
         email: String,
@@ -24,4 +30,27 @@ class FirebaseAuthentication {
                 }
             }
     }
+
+    fun login(
+        email: String,
+        password: String
+    ) {
+
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+
+                if (task.isSuccessful) {
+
+                    val user = auth.currentUser
+
+                    Log.d("@dev", "Login correcto ${user?.email}")
+
+                } else {
+
+                    Log.d("@dev", "Error ${task.exception}")
+
+                }
+            }
+    }
+
 }

@@ -18,14 +18,18 @@
         tools:layout="@layout/fragment_appointment" />
 
     <fragment
-        android:id="@+id/userFragment"
-        android:name="com.carlosdmg.ecoclinic.feature.user.presentation.UserFragment"
-        android:label="UserFragment"
+        android:id="@+id/loginFragment"
+        android:name="com.carlosdmg.ecoclinic.feature.user.presentation.LoginFragment"
+        android:label="LoginFragment"
         tools:layout="@layout/fragment_log_in">
 
         <action
-            android:id="@+id/action_userFragment_to_singupFragment"
+            android:id="@+id/action_loginFragment_to_singupFragment"
             app:destination="@id/singupFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_userFragment"
+            app:destination="@id/userFragment" />
 
     </fragment>
 
@@ -36,13 +40,16 @@
         tools:layout="@layout/fragment_sing_up">
 
         <action
-            android:id="@+id/action_singupFragment_to_userFragment"
-            app:destination="@id/userFragment" />
-
-        <action
-            android:id="@+id/action_singupFragment_to_login"
-            app:destination="@id/userFragment"/>
+            android:id="@+id/action_singupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
 
     </fragment>
+
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.carlosdmg.ecoclinic.feature.user.presentation.UserFragment"
+        android:label="UserFragment"
+        tools:layout="@layout/fragment_user"/>
 
 </navigation>

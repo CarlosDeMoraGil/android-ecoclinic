@@ -5,9 +5,9 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/user_fr_welcome"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/text_xxl"
-        android:text="@string/fragment_user_profile_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -8,9 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.carlosdmg.ecoclinic.R
+import com.carlosdmg.ecoclinic.app.data.FirebaseAuthentication
 import com.carlosdmg.ecoclinic.databinding.FragmentAppointmentBinding
 import com.carlosdmg.ecoclinic.feature.appointment.domain.Appointment
 import com.carlosdmg.ecoclinic.feature.appointment.presentation.adapter.AppointmentAdapter
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AppointmentFragment : Fragment() {
@@ -22,6 +24,7 @@ class AppointmentFragment : Fragment() {
 
     private lateinit var appointmentAdapter: AppointmentAdapter
 
+    private val firebaseAuth: FirebaseAuthentication by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,8 +38,9 @@ class AppointmentFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.loadAppointments("PAT_1")
         setUpView()
+        viewModel.loadAppointments(firebaseAuth.getCurrentUserId())
+
         setUpObserver()
 
     }

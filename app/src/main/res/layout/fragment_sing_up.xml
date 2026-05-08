@@ -81,6 +81,45 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/singup_fr_name_edit" />
 
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/AppSupportingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edad"
+            app:layout_constraintBottom_toTopOf="@id/sinup_fr_age_edit"
+            app:layout_constraintStart_toStartOf="@id/sinup_fr_age_edit" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sinup_fr_age_edit"
+            style="@style/CustomEditText"
+            android:layout_width="@dimen/image_xl"
+            android:layout_height="@dimen/space_xl"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/singup_fr_address_edit"
+            app:layout_constraintStart_toEndOf="@id/singup_fr_address_edit" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/AppSupportingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Género"
+            app:layout_constraintBottom_toTopOf="@id/sinup_fr_gender_edit"
+            app:layout_constraintStart_toStartOf="@id/sinup_fr_gender_edit" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sinup_fr_gender_edit"
+            style="@style/CustomEditText"
+            android:layout_width="@dimen/image_xl"
+            android:layout_height="@dimen/space_xl"
+            android:layout_marginStart="@dimen/space_m"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/sinup_fr_age_edit"
+            app:layout_constraintStart_toEndOf="@id/sinup_fr_age_edit" />
+
         <com.carlosdmg.ecoclinic.feature.user.presentation.views.SingUpFormField
             android:id="@+id/singup_fr_email_edit"
             android:layout_width="wrap_content"
@@ -88,6 +127,28 @@
             app:layout_constraintBottom_toTopOf="@id/singup_fr_passwd_edit"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/singup_fr_address_edit" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/singup_fr_pr_title"
+            style="@style/AppSupportingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/singup_fr_phone"
+            app:layout_constraintBottom_toTopOf="@id/singup_fr_pn_edit"
+            app:layout_constraintStart_toStartOf="@id/singup_fr_pn_edit" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/singup_fr_pn_edit"
+            style="@style/CustomEditText"
+            android:layout_width="@dimen/image_xxxl"
+            android:layout_height="@dimen/space_xl"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:hint="@string/singup_fr_phone_hint"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/singup_fr_email_edit"
+            app:layout_constraintStart_toEndOf="@id/singup_fr_email_edit"/>
 
         <com.carlosdmg.ecoclinic.feature.user.presentation.views.SingUpFormField
             android:id="@+id/singup_fr_passwd_edit"

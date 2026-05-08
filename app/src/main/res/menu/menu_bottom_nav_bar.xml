@@ -15,7 +15,7 @@
         android:title="@string/fragment_appointments_title" />
 
     <item
-        android:id="@+id/userFragment"
+        android:id="@+id/loginFragment"
         android:enabled="true"
         android:icon="@drawable/ic_user"
         android:title="@string/fragment_user_profile_title" />

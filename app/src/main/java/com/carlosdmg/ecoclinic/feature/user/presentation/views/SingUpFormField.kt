@@ -1,6 +1,8 @@
 package com.carlosdmg.ecoclinic.feature.user.presentation.views
 
 import android.content.Context
+import android.graphics.Typeface
+import android.text.InputType
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout

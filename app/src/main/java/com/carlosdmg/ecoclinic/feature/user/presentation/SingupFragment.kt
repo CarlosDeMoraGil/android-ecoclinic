@@ -9,16 +9,22 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.carlosdmg.ecoclinic.R
 import com.carlosdmg.ecoclinic.app.data.FirebaseAuthentication
+import com.carlosdmg.ecoclinic.app.presentation.hide
+import com.carlosdmg.ecoclinic.app.presentation.setNumeric
+import com.carlosdmg.ecoclinic.app.presentation.show
 import com.carlosdmg.ecoclinic.databinding.FragmentSingUpBinding
+import com.carlosdmg.ecoclinic.feature.user.domain.User
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SingupFragment : Fragment() {
 
     private var _binding: FragmentSingUpBinding? = null
     private val binding get() = _binding!!
-
     private val firebaseAuth: FirebaseAuthentication by inject()
+
+    private val viewModel: SaveUserViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,22 +43,32 @@ class SingupFragment : Fragment() {
     }
 
     private fun setUpForm() {
-        binding.singupFrSurnameEdit.setView(R.string.singup_fr_surname)
-        binding.singupFrAddressEdit.setView(
-            R.string.singup_fr_address,
-            R.string.singup_fr_address_hint
-        )
-        binding.singupFrEmailEdit.setView(R.string.log_fr_email, R.string.log_fr_email_hint)
-        binding.singupFrPasswdEdit.setView(R.string.log_fr_password)
-        binding.singupFrPasswdAuthEdit.setView(
-            R.string.log_fr_password,
-            R.string.singup_fr_password_auth_hint
-        )
+        binding.apply {
+            singupFrSurnameEdit.setView(R.string.singup_fr_surname)
+            singupFrAddressEdit.setView(
+                R.string.singup_fr_address,
+                R.string.singup_fr_address_hint
+            )
+            singupFrEmailEdit.setView(R.string.log_fr_email, R.string.log_fr_email_hint)
+            singupFrPnEdit.setNumeric()
+            sinupFrAgeEdit.setNumeric()
+            singupFrPasswdEdit.setView(R.string.log_fr_password)
+            singupFrPasswdAuthEdit.setView(
+                R.string.log_fr_password,
+                R.string.singup_fr_password_auth_hint
+            )
+        }
     }
 
     private fun singup() {
         binding.apply {
 
+            val name = singupFrNameEdit.text.toString()
+            val surname = singupFrSurnameEdit.getText()
+            val address = singupFrAddressEdit.getText()
+            val age = sinupFrAgeEdit.text.toString()
+            val phoneNumber = singupFrPnEdit.getText().toString()
+            val gender = sinupFrGenderEdit.text.toString()
             val email = singupFrEmailEdit.getText()
             val passwd = singupFrPasswdEdit.getText()
             val passwdAuth = singupFrPasswdAuthEdit.getText()
@@ -61,12 +77,15 @@ class SingupFragment : Fragment() {
 
             if (passwordsOk){
 
-                sinupFrErrorPasswd.visibility = View.GONE
+                sinupFrErrorPasswd.hide()
 
                 firebaseAuth.createUser(email, passwd) { result ->
 
                     result.onSuccess {
+                        val user = User(firebaseAuth.getCurrentUserId(), name, surname, address, email, age, gender,phoneNumber)
+
                         navigateUp()
+                        viewModel.saveUser(user)
                     }
 
                     result.onFailure { error ->
@@ -83,7 +102,7 @@ class SingupFragment : Fragment() {
                 }
 
             }else{
-                sinupFrErrorPasswd.visibility = View.VISIBLE
+                sinupFrErrorPasswd.show()
             }
 
         }
@@ -107,7 +126,7 @@ class SingupFragment : Fragment() {
     }
 
     private fun navigateToLogin() {
-        findNavController().navigate(SingupFragmentDirections.actionSingupFragmentToUserFragment())
+        findNavController().navigate(SingupFragmentDirections.actionSingupFragmentToLoginFragment())
     }
 
 
