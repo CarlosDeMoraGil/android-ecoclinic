@@ -84,8 +84,9 @@ class SingupFragment : Fragment() {
                     result.onSuccess {
                         val user = User(firebaseAuth.getCurrentUserId(), name, surname, address, email, age, gender,phoneNumber)
 
-                        navigateUp()
                         viewModel.saveUser(user)
+                        navigateUp()
+
                     }
 
                     result.onFailure { error ->

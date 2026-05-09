@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.carlosdmg.ecoclinic.R
@@ -44,18 +45,25 @@ class LoginFragment : Fragment() {
         }
     }
 
+
     private fun login() {
         binding.apply {
             val email = logFrEditEmail.getText()
             val password = logFrEditPasswd.getText()
 
-            firebaseAuth.login(email, password)
-            findNavController().navigate(R.id.action_loginFragment_to_userFragment)
-
+            firebaseAuth.login(email, password) { result ->
+                result.onSuccess {
+                    findNavController().navigate(R.id.action_loginFragment_to_userFragment)
+                }
+                result.onFailure {
+                    Toast.makeText(requireContext(), "Login failed", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 
     private fun checkLog() {
+        TODO()
         val loged = firebaseAuth.getCurrentUserId()
 
         if (loged != "null") {

@@ -36,9 +36,9 @@ class UserFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val ccuid = firebaseAuth.getCurrentUserId()
 
-        viewModel.getUserById(firebaseAuth.getCurrentUserId())
-
+        viewModel.getUserById(ccuid)
         setUpObserver()
 
     }
@@ -54,7 +54,18 @@ class UserFragment : Fragment() {
     }
 
     private fun bind(user: User?){
-        binding.userFrWelcome.text = user?.name
+        binding.apply {
+            userFrWelcome.text = user?.name
+
+            userFrSignOut.setOnClickListener {
+                firebaseAuth.singOut()
+                navigateToLogin()
+            }
+        }
+    }
+
+    private fun navigateToLogin(){
+        findNavController().navigate(UserFragmentDirections.actionUserFragmentToLoginFragment())
     }
 
     override fun onDestroyView() {

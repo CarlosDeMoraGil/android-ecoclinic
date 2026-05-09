@@ -14,6 +14,10 @@ class FirebaseAuthentication {
         return auth.currentUser?.uid.toString()
     }
 
+    fun singOut(){
+        auth.signOut()
+    }
+
 
     fun createUser(
         email: String,
@@ -33,22 +37,20 @@ class FirebaseAuthentication {
 
     fun login(
         email: String,
-        password: String
+        password: String,
+        onResult: (Result<AuthResult>) -> Unit
     ) {
 
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
 
                 if (task.isSuccessful) {
-
                     val user = auth.currentUser
-
                     Log.d("@dev", "Login correcto ${user?.email}")
-
+                    onResult(Result.success(task.result))
                 } else {
-
                     Log.d("@dev", "Error ${task.exception}")
-
+                    onResult(Result.failure(task.exception ?: Exception("Unknown error")))
                 }
             }
     }

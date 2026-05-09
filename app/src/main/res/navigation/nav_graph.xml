@@ -50,6 +50,12 @@
         android:id="@+id/userFragment"
         android:name="com.carlosdmg.ecoclinic.feature.user.presentation.UserFragment"
         android:label="UserFragment"
-        tools:layout="@layout/fragment_user"/>
+        tools:layout="@layout/fragment_user">
+
+        <action
+            android:id="@+id/action_userFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+
+    </fragment>
 
 </navigation>
