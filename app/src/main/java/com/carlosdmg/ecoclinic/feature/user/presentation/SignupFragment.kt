@@ -96,7 +96,7 @@ class SignupFragment : Fragment() {
                             )
 
                             viewModel.saveUser(user)
-                            navigateUp()
+                            navigateToLogin()
                         }
 
                     }
@@ -142,13 +142,12 @@ class SignupFragment : Fragment() {
         }
     }
 
-
-    private fun navigateUp() {
-        findNavController().navigateUp()
-    }
-
     private fun navigateToLogin() {
-        findNavController().navigate(SignupFragmentDirections.actionSignupFragmentToLoginFragment())
+        findNavController().navigate(
+            SignupFragmentDirections.actionSignupFragmentToLoginFragment(
+                true
+            )
+        )
     }
 
 

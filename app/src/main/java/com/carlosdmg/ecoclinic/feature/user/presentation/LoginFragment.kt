@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.carlosdmg.ecoclinic.R
 import com.carlosdmg.ecoclinic.app.data.FirebaseAuthentication
 import com.carlosdmg.ecoclinic.databinding.FragmentLogInBinding
@@ -18,6 +19,7 @@ class LoginFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val firebaseAuth: FirebaseAuthentication by inject()
+    private val navArgs: LoginFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -62,9 +64,10 @@ class LoginFragment : Fragment() {
     }
 
     private fun checkLog() {
-        val loged = firebaseAuth.getCurrentUserId()
+        val currentUser = firebaseAuth.getCurrentUserId()
+        val isSingUp = navArgs.isSignUp
 
-        if (loged != null) {
+        if (!isSingUp && currentUser != null) {
             findNavController().navigate(R.id.action_loginFragment_to_userFragment)
         }
 
