@@ -21,6 +21,7 @@
     <string name="in_fr_location_detail">Me encuentro en, <b>Ctra. Casillas, 6, Planta 1 – Local 5, 05420 Sotillo de la Adrada, Ávila, España.</b></string>
     <string name="in_fr_phone_number">640292614</string>
     <string name="in_fr_call_now">Llama ya</string>
+    <string name="in_fr_toolbar_title">Citas</string>
 
     <!-- 3. App Messages -->
     <string name="app_intent_error">No hay aplicaciones disponibles</string>
@@ -34,7 +35,6 @@
     <string name="appt_vw_timestamp">Fecha y hora:\u0020</string>
     <string name="appt_vw_details">Detalles:\u0020</string>
     <string name="appt_vw_type">Tipo de consulta:\u0020</string>
-    <string name="in_fr_toolbar_title">Citas</string>
 
     <!-- 5. Log in Screen -->
     <string name="log_fr_welcome">¡Bienvenido! Inicia sesión o crea tu cuenta para continuar!</string>
@@ -42,20 +42,24 @@
     <string name="log_fr_email">Correo electrónico</string>
     <string name="log_fr_email_hint">example@gmail.com</string>
     <string name="log_fr_password">Contraseña</string>
-    <string name="log_fr_singup">Regístrate</string>
+    <string name="log_fr_signup">Regístrate</string>
     <string name="log_fr_log_in">Iniciar Sesión</string>
     <string name="log_fr_forgotten">¿Olvidaste tu contraseña?</string>
 
-    <!-- 6. Sing up Screen -->
-    <string name="singup_fr_headline">Rellena la siguiente información para poder registrarte.</string>
-    <string name="singup_fr_name">Nombre</string>
-    <string name="singup_fr_surname">Apellidos</string>
-    <string name="singup_fr_address">Dirección Postal</string>
-    <string name="singup_fr_address_hint">Nombre de vía, número y portal</string>
-    <string name="singup_fr_password_auth_hint">Repetir contraseña</string>
-    <string name="singup_fr_button">Continuar</string>
-    <string name="singup_fr_goback">Tengo cuenta</string>
-    <string name="singup_fr_passwd_error">Las contraseñas no coinciden*</string>
-    <string name="singup_fr_user_error">El usuario ya existe</string>
+    <!-- 6. sign up Screen -->
+    <string name="signup_fr_headline">Rellena la siguiente información para poder registrarte.</string>
+    <string name="signup_fr_name">Nombre</string>
+    <string name="signup_fr_surname">Apellidos</string>
+    <string name="signup_fr_address">Dirección Postal</string>
+    <string name="signup_fr_address_hint">Nombre de vía, número y portal</string>
+    <string name="signup_fr_password_auth_hint">Repetir contraseña</string>
+    <string name="signup_fr_button">Continuar</string>
+    <string name="signup_fr_goback">Tengo cuenta</string>
+    <string name="signup_fr_passwd_error">Las contraseñas no coinciden*</string>
+    <string name="signup_fr_user_error">El usuario ya existe</string>
+    <string name="signup_fr_phone_hint">123 - 456 - 789</string>
+    <string name="signup_fr_phone">Número de teléfono</string>
+    <string name="signup_fr_age">Edad</string>
+    <string name="signup_fr_gender">Género</string>
 
 </resources>

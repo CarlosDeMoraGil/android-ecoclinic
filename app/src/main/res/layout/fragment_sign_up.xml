@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/signup_fr_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ex_xxxxl"
+        app:cardBackgroundColor="@color/md_theme_primaryContainer"
+        app:cardElevation="@dimen/space_xs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/BottomRoundedCard">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/clinic_logo"
+            android:src="@drawable/img_title" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/signup_fr_headline"
+        style="@style/AppSupportingText"
+        android:layout_width="@dimen/ex_zero"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_m"
+        android:gravity="center"
+        android:text="@string/signup_fr_headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_fr_cardview" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signup_fr_form"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/space_m"
+        app:layout_constraintBottom_toTopOf="@id/signup_fr_signup_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup_fr_headline">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/signup_fr_name_title"
+            style="@style/AppSupportingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup_fr_name"
+            app:layout_constraintBottom_toTopOf="@id/signup_fr_name_edit"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signup_fr_name_edit"
+            style="@style/CustomEditText"
+            android:layout_width="@dimen/image_xxxl"
+            android:layout_height="@dimen/space_xl"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@id/signup_fr_address_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SignUpFormField
+            android:id="@+id/signup_fr_surname_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_m"
+            app:layout_constraintBottom_toBottomOf="@id/signup_fr_name_edit"
+            app:layout_constraintStart_toEndOf="@id/signup_fr_name_edit" />
+
+        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SignUpFormField
+            android:id="@+id/signup_fr_address_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/signup_fr_email_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signup_fr_name_edit" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/AppSupportingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup_fr_age"
+            app:layout_constraintBottom_toTopOf="@id/sinup_fr_age_edit"
+            app:layout_constraintStart_toStartOf="@id/sinup_fr_age_edit" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sinup_fr_age_edit"
+            style="@style/CustomEditText"
+            android:layout_width="@dimen/image_xl"
+            android:layout_height="@dimen/space_xl"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/signup_fr_address_edit"
+            app:layout_constraintStart_toEndOf="@id/signup_fr_address_edit" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/AppSupportingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup_fr_gender"
+            app:layout_constraintBottom_toTopOf="@id/sinup_fr_gender_edit"
+            app:layout_constraintStart_toStartOf="@id/sinup_fr_gender_edit" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sinup_fr_gender_edit"
+            style="@style/CustomEditText"
+            android:layout_width="@dimen/image_xl"
+            android:layout_height="@dimen/space_xl"
+            android:layout_marginStart="@dimen/space_m"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/sinup_fr_age_edit"
+            app:layout_constraintStart_toEndOf="@id/sinup_fr_age_edit" />
+
+        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SignUpFormField
+            android:id="@+id/signup_fr_email_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/signup_fr_passwd_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signup_fr_address_edit" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/signup_fr_pr_title"
+            style="@style/AppSupportingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup_fr_phone"
+            app:layout_constraintBottom_toTopOf="@id/signup_fr_pn_edit"
+            app:layout_constraintStart_toStartOf="@id/signup_fr_pn_edit" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signup_fr_pn_edit"
+            style="@style/CustomEditText"
+            android:layout_width="@dimen/image_xxxl"
+            android:layout_height="@dimen/space_xl"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:hint="@string/signup_fr_phone_hint"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/signup_fr_email_edit"
+            app:layout_constraintStart_toEndOf="@id/signup_fr_email_edit" />
+
+        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SignUpFormField
+            android:id="@+id/signup_fr_passwd_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/signup_fr_passwd_Auth_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signup_fr_email_edit" />
+
+        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SignUpFormField
+            android:id="@+id/signup_fr_passwd_Auth_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/sinup_fr_error_passwd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signup_fr_passwd_edit" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/sinup_fr_error_passwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup_fr_passwd_error"
+            android:visibility="gone"
+            android:textColor="@color/md_theme_error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signup_fr_passwd_Auth_edit" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signup_fr_signup_button"
+        android:layout_width="120dp"
+        android:layout_height="@dimen/image_m"
+        android:layout_marginBottom="@dimen/space_l"
+        android:backgroundTint="@color/md_theme_primaryContainer"
+        android:insetTop="@dimen/ex_zero"
+        android:insetBottom="@dimen/ex_zero"
+        android:text="@string/signup_fr_button"
+        android:textAllCaps="false"
+        android:textColor="@color/md_theme_onSurface"
+        android:textSize="@dimen/text_xs"
+        app:layout_constraintBottom_toTopOf="@id/signup_fr_goback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent"
+        app:strokeColor="@color/md_theme_primaryContainer_v2"
+        app:strokeWidth="@dimen/ex_mininum" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/signup_fr_goback"
+        style="@style/AppSupportingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_l"
+        android:text="@string/signup_fr_goback"
+        android:textColor="@color/md_theme_primaryContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

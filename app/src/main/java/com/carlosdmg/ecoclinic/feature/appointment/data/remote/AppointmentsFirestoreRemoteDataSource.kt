@@ -11,7 +11,7 @@ class AppointmentsFirestoreRemoteDataSource {
 
     val db = Firebase.firestore
 
-    suspend fun getAppointments(patientId: String): Result<List<Appointment>> {
+    suspend fun getAppointments(patientId: String?): Result<List<Appointment>> {
         val appointments = db.collection("appointments")
             .whereEqualTo("patientId", patientId)
             .get()
