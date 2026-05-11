@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Borde interior, desplazado por 4dp para verse “doble” -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="@dimen/ex_mininum"
+                android:color="@color/md_theme_outlineVariant" />       <!-- color y grosor exterior -->
+            <corners android:radius="@dimen/space_s" />
+        </shape>
+    </item>
+
+</layer-list>

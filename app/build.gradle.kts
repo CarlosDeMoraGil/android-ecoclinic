@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.google.services)
+    alias(libs.plugins.navigation.safeargs.kotlin)
 }
 
 android {
@@ -11,7 +12,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.carlosdmg.android_ecoclinic"
+        applicationId = "com.carlosdmg.ecoclinic"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -66,6 +67,8 @@ dependencies {
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.firestore)
+
+    implementation(libs.firebase.auth)
 
     testImplementation(libs.junit)
 

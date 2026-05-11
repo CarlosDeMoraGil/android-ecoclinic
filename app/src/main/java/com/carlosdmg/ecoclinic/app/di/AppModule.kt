@@ -4,6 +4,7 @@ import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 
 @Module
-@ComponentScan("com.carlosdmg.android_ecoclinic")
+@ComponentScan("com.carlosdmg.ecoclinic")
 class AppModule {
+
 }

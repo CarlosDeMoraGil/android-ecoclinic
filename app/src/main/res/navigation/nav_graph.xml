@@ -7,23 +7,61 @@
 
     <fragment
         android:id="@+id/informationFragment"
-        android:label="InformationFragment"
         android:name="com.carlosdmg.ecoclinic.feature.information.presentation.InformationFragment"
-        tools:layout="@layout/fragment_information"
-        />
+        android:label="InformationFragment"
+        tools:layout="@layout/fragment_information" />
 
     <fragment
         android:id="@+id/appointmentFragment"
-        android:label="AppointmentFragment"
         android:name="com.carlosdmg.ecoclinic.feature.appointment.presentation.AppointmentFragment"
-        tools:layout="@layout/fragment_appointment"
-        />
+        android:label="AppointmentFragment"
+        tools:layout="@layout/fragment_appointment" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.carlosdmg.ecoclinic.feature.user.presentation.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_log_in">
+
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+
+        <argument
+            android:name="isSignUp"
+            app:argType="boolean"
+            android:defaultValue="false" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.carlosdmg.ecoclinic.feature.user.presentation.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_sign_up">
+
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+    </fragment>
+
 
     <fragment
         android:id="@+id/userFragment"
-        android:label="UserFragment"
         android:name="com.carlosdmg.ecoclinic.feature.user.presentation.UserFragment"
-        tools:layout="@layout/fragment_user"
-        />
+        android:label="UserFragment"
+        tools:layout="@layout/fragment_user">
+
+        <action
+            android:id="@+id/action_userFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+
+    </fragment>
 
 </navigation>

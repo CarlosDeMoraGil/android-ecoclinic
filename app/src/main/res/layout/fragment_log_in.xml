@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/log_fr_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ex_xxxxxl"
+        app:cardBackgroundColor="@color/md_theme_primaryContainer"
+        app:cardElevation="@dimen/space_xs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/BottomRoundedCard">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/clinic_logo"
+            android:src="@drawable/img_title" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log_fr_cardview">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/log_fr_headline"
+            style="@style/AppHeadline"
+            android:layout_width="@dimen/ex_zero"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_m"
+            android:gravity="center"
+            android:text="@string/log_fr_welcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/log_fr_login"
+            style="@style/AppHeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/space_m"
+            android:text="@string/log_fr_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/log_fr_headline" />
+
+        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SignUpFormField
+            android:id="@+id/log_fr_edit_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_m"
+            app:layout_constraintBottom_toTopOf="@id/log_fr_edit_passwd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/log_fr_login" />
+
+
+        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SignUpFormField
+            android:id="@+id/log_fr_edit_passwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_m"
+            app:layout_constraintBottom_toBottomOf="@id/log_fr_buttons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/log_fr_edit_email" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/log_fr_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_xl"
+            app:layout_constraintBottom_toTopOf="@id/log_fr_forgotten"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/log_fr_edit_passwd">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/log_fr_signup_button"
+                android:layout_width="120dp"
+                android:layout_height="@dimen/image_m"
+                android:backgroundTint="@color/md_theme_background"
+                android:insetTop="@dimen/ex_zero"
+                android:insetBottom="@dimen/ex_zero"
+                android:text="@string/log_fr_signup"
+                android:textAllCaps="false"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="@dimen/text_xs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/log_fr_log_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent"
+                app:strokeColor="@color/md_theme_primaryContainer"
+                app:strokeWidth="@dimen/ex_mininum" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/log_fr_log_button"
+                android:layout_width="120dp"
+                android:layout_height="@dimen/image_m"
+                android:backgroundTint="@color/md_theme_primaryContainer"
+                android:insetTop="@dimen/ex_zero"
+                android:insetBottom="@dimen/ex_zero"
+                android:text="@string/log_fr_log_in"
+                android:textAllCaps="false"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="@dimen/text_xs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/log_fr_signup_button"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent"
+                app:strokeColor="@color/md_theme_primaryContainer_v2"
+                app:strokeWidth="@dimen/ex_mininum" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/log_fr_forgotten"
+            style="@style/AppSupportingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_m"
+            android:text="@string/log_fr_forgotten"
+            android:textColor="@color/md_theme_primaryContainer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/log_fr_buttons" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
