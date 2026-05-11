@@ -18,7 +18,7 @@ class AppointmentsViewModel(private val getAppointmentsUseCase: GetAppointmentsU
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> get() = _uiState
 
-    fun loadAppointments(patientId: String) {
+    fun loadAppointments(patientId: String?) {
         _uiState.value = UiState(isLoading = true)
         viewModelScope.launch(Dispatchers.IO) {
             val appointment = getAppointmentsUseCase(patientId)

@@ -25,13 +25,14 @@ class UsersFirestoreRemoteDataSource {
             }
     }
 
-    suspend fun getUserById(userId: String): User? =
-        db.collection("patients")
-            .document(userId)
-            .get()
-            .await()
-            .toObject(UserDbModel::class.java)
-            ?.toModel()
-
+    suspend fun getUserById(userId: String?): User? =
+        userId?.let { userId ->
+            db.collection("patients")
+                .document(userId)
+                .get()
+                .await()
+                .toObject(UserDbModel::class.java)
+                ?.toModel()
+        }
 
 }

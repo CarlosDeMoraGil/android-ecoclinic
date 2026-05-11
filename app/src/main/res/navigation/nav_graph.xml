@@ -24,8 +24,8 @@
         tools:layout="@layout/fragment_log_in">
 
         <action
-            android:id="@+id/action_loginFragment_to_singupFragment"
-            app:destination="@id/singupFragment" />
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
 
         <action
             android:id="@+id/action_loginFragment_to_userFragment"
@@ -34,13 +34,13 @@
     </fragment>
 
     <fragment
-        android:id="@+id/singupFragment"
-        android:name="com.carlosdmg.ecoclinic.feature.user.presentation.SingupFragment"
-        android:label="SingupFragment"
-        tools:layout="@layout/fragment_sing_up">
+        android:id="@+id/signupFragment"
+        android:name="com.carlosdmg.ecoclinic.feature.user.presentation.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_sign_up">
 
         <action
-            android:id="@+id/action_singupFragment_to_loginFragment"
+            android:id="@+id/action_signupFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
 
     </fragment>

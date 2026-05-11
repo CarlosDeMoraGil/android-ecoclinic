@@ -53,7 +53,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/log_fr_headline" />
 
-        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SingUpFormField
+        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SignUpFormField
             android:id="@+id/log_fr_edit_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
             app:layout_constraintTop_toBottomOf="@id/log_fr_login" />
 
 
-        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SingUpFormField
+        <com.carlosdmg.ecoclinic.feature.user.presentation.views.SignUpFormField
             android:id="@+id/log_fr_edit_passwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,13 +84,13 @@
             app:layout_constraintTop_toBottomOf="@id/log_fr_edit_passwd">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/log_fr_singup_button"
+                android:id="@+id/log_fr_signup_button"
                 android:layout_width="120dp"
                 android:layout_height="@dimen/image_m"
                 android:backgroundTint="@color/md_theme_background"
                 android:insetTop="@dimen/ex_zero"
                 android:insetBottom="@dimen/ex_zero"
-                android:text="@string/log_fr_singup"
+                android:text="@string/log_fr_signup"
                 android:textAllCaps="false"
                 android:textColor="@color/md_theme_onSurface"
                 android:textSize="@dimen/text_xs"
@@ -115,7 +115,7 @@
                 android:textSize="@dimen/text_xs"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/log_fr_singup_button"
+                app:layout_constraintStart_toEndOf="@id/log_fr_signup_button"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent"
                 app:strokeColor="@color/md_theme_primaryContainer_v2"

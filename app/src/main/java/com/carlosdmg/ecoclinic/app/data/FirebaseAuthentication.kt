@@ -10,8 +10,8 @@ class FirebaseAuthentication {
 
     private val auth = FirebaseAuth.getInstance()
 
-    fun getCurrentUserId(): String {
-        return auth.currentUser?.uid.toString()
+    fun getCurrentUserId(): String? {
+        return auth.currentUser?.uid
     }
 
     fun singOut(){

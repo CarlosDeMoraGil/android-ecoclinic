@@ -16,7 +16,7 @@ class UserViewModel(private val getUserByIdUseCase: GetUserByIdUseCase) : ViewMo
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> get() = _uiState
 
-    fun getUserById(userId: String) {
+    fun getUserById(userId: String?) {
         _uiState.value = UiState(isLoading = true)
         viewModelScope.launch(Dispatchers.IO) {
             val user = getUserByIdUseCase.invoke(userId)

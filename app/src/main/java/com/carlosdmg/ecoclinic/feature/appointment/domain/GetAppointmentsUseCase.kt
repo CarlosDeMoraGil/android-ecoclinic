@@ -7,7 +7,7 @@ class GetAppointmentsUseCase(
     private val appointmentsRepository: AppointmentsRepository
 ) {
 
-    suspend operator fun invoke(patientId: String): Result<List<Appointment>> {
+    suspend operator fun invoke(patientId: String?): Result<List<Appointment>> {
         return appointmentsRepository.getAppointments(patientId)
     }
 }

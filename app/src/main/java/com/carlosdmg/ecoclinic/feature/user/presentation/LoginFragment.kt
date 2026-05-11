@@ -11,7 +11,6 @@ import com.carlosdmg.ecoclinic.R
 import com.carlosdmg.ecoclinic.app.data.FirebaseAuthentication
 import com.carlosdmg.ecoclinic.databinding.FragmentLogInBinding
 import org.koin.android.ext.android.inject
-import kotlin.math.log
 
 class LoginFragment : Fragment() {
 
@@ -63,10 +62,9 @@ class LoginFragment : Fragment() {
     }
 
     private fun checkLog() {
-        TODO()
         val loged = firebaseAuth.getCurrentUserId()
 
-        if (loged != "null") {
+        if (loged != null) {
             findNavController().navigate(R.id.action_loginFragment_to_userFragment)
         }
 
@@ -78,14 +76,14 @@ class LoginFragment : Fragment() {
             logFrEditEmail.setView(R.string.log_fr_email, R.string.log_fr_email_hint)
             logFrEditPasswd.setView(R.string.log_fr_password)
 
-            logFrSingupButton.setOnClickListener {
-                navigateToSingUp()
+            logFrSignupButton.setOnClickListener {
+                navigateTosignUp()
             }
         }
     }
 
-    private fun navigateToSingUp() {
-        findNavController().navigate(R.id.action_loginFragment_to_singupFragment)
+    private fun navigateTosignUp() {
+        findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
     }
 
 

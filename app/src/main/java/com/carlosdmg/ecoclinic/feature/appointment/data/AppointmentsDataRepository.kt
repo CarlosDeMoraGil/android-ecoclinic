@@ -9,7 +9,7 @@ import org.koin.core.annotation.Single
 class AppointmentsDataRepository(private val remoteDataSource: AppointmentsFirestoreRemoteDataSource) :
     AppointmentsRepository {
 
-    override suspend fun getAppointments(patientId: String): Result<List<Appointment>> {
+    override suspend fun getAppointments(patientId: String?): Result<List<Appointment>> {
         return remoteDataSource.getAppointments(patientId)
     }
 

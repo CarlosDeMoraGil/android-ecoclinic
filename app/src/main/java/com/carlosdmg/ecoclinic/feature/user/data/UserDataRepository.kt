@@ -13,7 +13,7 @@ class UserDataRepository(private val remoteDataSource: UsersFirestoreRemoteDataS
         remoteDataSource.saveUser(user)
     }
 
-    override suspend fun getUserById(userId: String): User? {
+    override suspend fun getUserById(userId: String?): User? {
         return remoteDataSource.getUserById(userId)
     }
 }
