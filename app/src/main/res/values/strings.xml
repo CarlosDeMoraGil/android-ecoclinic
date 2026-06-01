@@ -72,5 +72,7 @@
     <string name="signup_fr_login_succ">Login correcto</string>
     <string name="signup_fr_error">Error</string>
     <string name="signup_fr_unknown_error">Unknown error</string>
+    <string name="sigup_fr_login_failed">Inicio de sesión fallado</string>
+    <string name="sigup_fr_credentials_failed">Credenciales incorrectas</string>
 
 </resources>

@@ -57,17 +57,44 @@ class LoginFragment : Fragment() {
 
     private fun login() {
         binding.apply {
-            val email = logFrEditEmail.getText()
-            val password = logFrEditPasswd.getText()
+            if (checkFields()) {
+                val email = logFrEditEmail.getText()
+                val password = logFrEditPasswd.getText()
 
-            firebaseAuth.login(email, password) { result ->
-                result.onSuccess {
-                    findNavController().navigate(R.id.action_loginFragment_to_userFragment)
+                firebaseAuth.login(email, password) { result ->
+                    result.onSuccess {
+                        findNavController().navigate(R.id.action_loginFragment_to_userFragment)
+                    }
+                    result.onFailure {
+                        Toast.makeText(
+                            requireContext(),
+                            getString(R.string.sigup_fr_login_failed), Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
-                result.onFailure {
-                    Toast.makeText(requireContext(), "Login failed", Toast.LENGTH_SHORT).show()
-                }
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    getString(R.string.sigup_fr_credentials_failed),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
+        }
+    }
+
+    private fun checkFields(): Boolean {
+        return binding.run {
+            val fields = listOf(logFrEditEmail, logFrEditPasswd)
+
+            val validationResults = fields.map { field ->
+                val isValid = !field.isEmpty()
+                val color = if (isValid) R.color.md_theme_onSurface else R.color.md_theme_error
+                field.setColor(color)
+
+                isValid
+            }
+
+            validationResults.all { it }
         }
     }
 
