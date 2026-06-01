@@ -45,6 +45,7 @@
     <string name="log_fr_signup">Regístrate</string>
     <string name="log_fr_log_in">Iniciar Sesión</string>
     <string name="log_fr_forgotten">¿Olvidaste tu contraseña?</string>
+    <string name="log_fr_passwd_hint">Introduce tu contraseña</string>
 
     <!-- 6. sign up Screen -->
     <string name="signup_fr_headline">Rellena la siguiente información para poder registrarte.</string>
@@ -52,7 +53,7 @@
     <string name="signup_fr_surname">Apellidos</string>
     <string name="signup_fr_address">Dirección Postal</string>
     <string name="signup_fr_address_hint">Nombre de vía, número y portal</string>
-    <string name="signup_fr_password_auth_hint">Repetir contraseña</string>
+    <string name="signup_fr_password_auth_hint">Repita la contraseña</string>
     <string name="signup_fr_button">Continuar</string>
     <string name="signup_fr_goback">Tengo cuenta</string>
     <string name="signup_fr_passwd_error">Las contraseñas no coinciden*</string>
@@ -61,5 +62,15 @@
     <string name="signup_fr_phone">Número de teléfono</string>
     <string name="signup_fr_age">Edad</string>
     <string name="signup_fr_gender">Género</string>
+    <string name="signup_fr_error_email">La dirección de correo no es valida</string>
+    <string name="signup_fr_passwd_hint">Introduce una contraseña</string>
+    <string name="signup_fr_weak_password_error">La contraseña es debil</string>
+    <string name="signup_fr_error_pn">Introduce un teléfono valido</string>
+    <string name="signup_fr_spinner_male">Hombre</string>
+    <string name="signup_fr_spinner_female">Mujer</string>
+    <string name="signup_fr_spinner_other">Otro</string>
+    <string name="signup_fr_login_succ">Login correcto</string>
+    <string name="signup_fr_error">Error</string>
+    <string name="signup_fr_unknown_error">Unknown error</string>
 
 </resources>

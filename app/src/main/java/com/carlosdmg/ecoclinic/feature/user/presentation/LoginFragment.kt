@@ -34,18 +34,26 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         checkLog()
-        binding()
-        setUpLogin()
+        setUpView()
     }
 
-    private fun setUpLogin() {
+    private fun setUpView() {
         binding.apply {
+            logFrEditEmail.setView(R.string.log_fr_email, R.string.log_fr_email_hint)
+            logFrEditPasswd.setView(
+                R.string.log_fr_password,
+                R.string.log_fr_passwd_hint, passwordType = true
+            )
+
+            logFrSignupButton.setOnClickListener {
+                navigateTosignUp()
+            }
             logFrLogButton.setOnClickListener {
                 login()
             }
+            showHidePassword()
         }
     }
-
 
     private fun login() {
         binding.apply {
@@ -73,14 +81,20 @@ class LoginFragment : Fragment() {
 
     }
 
-
-    private fun binding() {
+    private fun showHidePassword() {
         binding.apply {
-            logFrEditEmail.setView(R.string.log_fr_email, R.string.log_fr_email_hint)
-            logFrEditPasswd.setView(R.string.log_fr_password)
+            var isPasswordVisible = true
 
-            logFrSignupButton.setOnClickListener {
-                navigateTosignUp()
+            signupFrEye.setOnClickListener {
+                isPasswordVisible = !isPasswordVisible
+
+                logFrEditPasswd.setPasswordVisibility(isPasswordVisible)
+
+                if (isPasswordVisible) {
+                    signupFrEye.setImageResource(R.drawable.ic_eye_closed)
+                } else {
+                    signupFrEye.setImageResource(R.drawable.ic_open_eye)
+                }
             }
         }
     }

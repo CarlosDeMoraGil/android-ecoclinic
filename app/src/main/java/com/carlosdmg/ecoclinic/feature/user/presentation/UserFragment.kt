@@ -54,7 +54,7 @@ class UserFragment : Fragment() {
             userFrWelcome.text = user?.name
 
             userFrSignOut.setOnClickListener {
-                firebaseAuth.singOut()
+                firebaseAuth.signOut()
                 navigateToLogin()
             }
         }
