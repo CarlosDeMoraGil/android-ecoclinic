@@ -70,6 +70,10 @@ dependencies {
 
     implementation(libs.firebase.auth)
 
+    ksp(libs.room.ksp)
+    implementation(libs.room.runtime)
+    implementation(libs.room.coroutines)
+
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.junit)
