@@ -74,6 +74,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/log_fr_edit_email" />
 
+        <ImageView
+            android:id="@+id/signup_fr_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="@android:color/transparent"
+            android:padding="@dimen/ex_zero"
+            android:src="@drawable/ic_eye_closed"
+            app:layout_constraintBottom_toBottomOf="@id/log_fr_edit_passwd"
+            app:layout_constraintStart_toEndOf="@id/log_fr_edit_passwd"
+            app:tint="@color/md_theme_onSurface" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/log_fr_buttons"
             android:layout_width="match_parent"
