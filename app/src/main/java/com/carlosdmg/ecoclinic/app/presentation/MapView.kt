@@ -1,4 +1,4 @@
-package com.carlosdmg.ecoclinic.app
+package com.carlosdmg.ecoclinic.app.presentation
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap

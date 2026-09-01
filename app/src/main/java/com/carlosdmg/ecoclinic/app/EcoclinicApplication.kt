@@ -1,6 +1,7 @@
 package com.carlosdmg.ecoclinic.app
 
 import android.app.Application
+import com.carlosdmg.ecoclinic.app.data.db.LocalModule
 import com.carlosdmg.ecoclinic.app.di.AppModule
 import com.carlosdmg.ecoclinic.feature.appointment.di.AppointmentModule
 import com.carlosdmg.ecoclinic.feature.user.di.UserModule
@@ -19,7 +20,8 @@ class EcoclinicApplication : Application() {
             modules(
                 AppModule().module,
                 AppointmentModule().module,
-                UserModule().module
+                UserModule().module,
+                LocalModule().module
             )
 
         }
