@@ -51,6 +51,9 @@ class LoginFragment : Fragment() {
             logFrLogButton.setOnClickListener {
                 login()
             }
+            logFrForgotten.setOnClickListener {
+                navigateToResetPasswd()
+            }
             showHidePassword()
         }
     }
@@ -126,8 +129,13 @@ class LoginFragment : Fragment() {
         }
     }
 
+
     private fun navigateTosignUp() {
         findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
+    }
+
+    private fun navigateToResetPasswd() {
+        findNavController().navigate(R.id.action_loginFragment_to_resetPassword)
     }
 
 

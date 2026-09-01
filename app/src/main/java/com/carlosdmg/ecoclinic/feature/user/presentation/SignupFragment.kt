@@ -16,6 +16,7 @@ import com.carlosdmg.ecoclinic.app.presentation.setColor
 import com.carlosdmg.ecoclinic.app.presentation.setVisibility
 import com.carlosdmg.ecoclinic.databinding.FragmentSignUpBinding
 import com.carlosdmg.ecoclinic.feature.user.domain.User
+import com.carlosdmg.ecoclinic.feature.user.presentation.viewmodel.SaveUserViewModel
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import org.koin.android.ext.android.inject

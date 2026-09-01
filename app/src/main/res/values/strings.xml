@@ -47,7 +47,7 @@
     <string name="log_fr_forgotten">¿Olvidaste tu contraseña?</string>
     <string name="log_fr_passwd_hint">Introduce tu contraseña</string>
 
-    <!-- 6. sign up Screen -->
+    <!-- 6. Sign up Screen -->
     <string name="signup_fr_headline">Rellena la siguiente información para poder registrarte.</string>
     <string name="signup_fr_name">Nombre</string>
     <string name="signup_fr_surname">Apellidos</string>
@@ -74,5 +74,9 @@
     <string name="signup_fr_unknown_error">Unknown error</string>
     <string name="sigup_fr_login_failed">Inicio de sesión fallado</string>
     <string name="sigup_fr_credentials_failed">Credenciales incorrectas</string>
+
+    <!-- 7. Reset Password Screen -->
+    <string name="reset_password_fr_title">Restablecer contraseña</string>
+    <string name="reset_password_fr_instructions">Introduce tu correo electronico.</string>
 
 </resources>

@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.carlosdmg.ecoclinic.app.data.FirebaseAuthentication
 import com.carlosdmg.ecoclinic.databinding.FragmentUserBinding
 import com.carlosdmg.ecoclinic.feature.user.domain.User
+import com.carlosdmg.ecoclinic.feature.user.presentation.viewmodel.UserViewModel
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

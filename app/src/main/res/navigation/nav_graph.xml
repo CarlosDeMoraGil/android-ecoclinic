@@ -36,6 +36,9 @@
             app:argType="boolean"
             android:defaultValue="false" />
 
+        <action
+            android:id="@+id/action_loginFragment_to_resetPassword"
+            app:destination="@id/resetPassword" />
 
     </fragment>
 
@@ -62,6 +65,14 @@
             android:id="@+id/action_userFragment_to_loginFragment"
             app:destination="@id/loginFragment"/>
 
+
     </fragment>
+
+    <fragment
+        android:id="@+id/resetPassword"
+        android:name="com.carlosdmg.ecoclinic.feature.user.presentation.ResetPasswordFragment"
+        android:label="ResetPassword"
+        tools:layout="@layout/fragment_reset_password" />
+
 
 </navigation>

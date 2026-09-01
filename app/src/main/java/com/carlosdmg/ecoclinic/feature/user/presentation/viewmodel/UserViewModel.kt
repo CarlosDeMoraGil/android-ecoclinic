@@ -1,4 +1,4 @@
-package com.carlosdmg.ecoclinic.feature.user.presentation
+package com.carlosdmg.ecoclinic.feature.user.presentation.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
