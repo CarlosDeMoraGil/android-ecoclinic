@@ -1,6 +1,7 @@
 package com.carlosdmg.ecoclinic.app.data
 
 import android.content.Context
+import android.util.Log
 import android.widget.Toast
 import com.carlosdmg.ecoclinic.R
 import com.google.firebase.auth.AuthResult
@@ -105,6 +106,15 @@ class FirebaseAuthentication(private val context: Context) {
                     )
                 }
             }
+    }
+
+    fun resetPassword(email: String) {
+        auth.sendPasswordResetEmail(email).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                Log.d("@dev", "Email sent.")
+            }
+        }
+
     }
 
 }

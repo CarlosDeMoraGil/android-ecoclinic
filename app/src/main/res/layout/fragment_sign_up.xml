@@ -162,22 +162,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signup_fr_signup_button"
-        android:layout_width="120dp"
-        android:layout_height="@dimen/image_m"
+        style="@style/AppButton.SignUp"
         android:layout_marginBottom="@dimen/space_l"
-        android:backgroundTint="@color/md_theme_primaryContainer"
-        android:insetTop="@dimen/ex_zero"
-        android:insetBottom="@dimen/ex_zero"
         android:text="@string/signup_fr_button"
-        android:textAllCaps="false"
-        android:textColor="@color/md_theme_onSurface"
-        android:textSize="@dimen/text_xs"
         app:layout_constraintBottom_toTopOf="@id/signup_fr_goback"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent"
-        app:strokeColor="@color/md_theme_primaryContainer_v2"
-        app:strokeWidth="@dimen/ex_mininum" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <com.google.android.material.textview.MaterialTextView
