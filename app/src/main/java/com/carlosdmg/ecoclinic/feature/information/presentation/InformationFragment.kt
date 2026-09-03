@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.carlosdmg.ecoclinic.app.MapView
 import com.carlosdmg.ecoclinic.R
+import com.carlosdmg.ecoclinic.app.presentation.MapView
 import com.carlosdmg.ecoclinic.app.presentation.NavIntent
 import com.carlosdmg.ecoclinic.databinding.FragmentInformationBinding
 import com.google.android.gms.maps.SupportMapFragment

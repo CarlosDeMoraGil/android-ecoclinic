@@ -25,6 +25,8 @@ googleServices = "4.4.2"
 
 koin-ksp-version = "1.4.0"
 
+room-version = "2.8.4"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -48,6 +50,11 @@ firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 
 firebase-auth = { module = "com.google.firebase:firebase-auth" }
+
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room-version" }
+room-ksp = { group = "androidx.room", name = "room-compiler", version.ref = "room-version" }
+room-coroutines = { group = "androidx.room", name = "room-ktx", version.ref = "room-version" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
