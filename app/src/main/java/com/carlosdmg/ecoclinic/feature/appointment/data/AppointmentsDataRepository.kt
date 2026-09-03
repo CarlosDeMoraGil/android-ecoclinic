@@ -18,6 +18,8 @@ class AppointmentsDataRepository(
         patientId: String?
     ): Result<List<Appointment>> {
 
+        localDataSource.deleteAll()
+
         return localDataSource.getAppointments().fold(
 
             onSuccess = { appointments ->
@@ -26,7 +28,7 @@ class AppointmentsDataRepository(
 
             onFailure = { error ->
                 when (error) {
-                    ErrorApp.CacheExpiredErrorApp -> {
+                    is ErrorApp.CacheExpiredErrorApp, is ErrorApp.NoDataError -> {
                         remoteDataSource.getAppointments(patientId).fold(
                             onSuccess = { appointments ->
                                 localDataSource.saveAppointments(appointments)

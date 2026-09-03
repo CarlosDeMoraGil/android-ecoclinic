@@ -10,7 +10,6 @@ import org.koin.core.annotation.Single
 @ComponentScan("com.carlosdmg.ecoclinic.feature.appointment")
 class AppointmentModule {
 
-
     @Single
     fun provideAppointmentsDao(db: EcoclinicDataBase): AppointmentsDao {
         return db.appointmentsDao()

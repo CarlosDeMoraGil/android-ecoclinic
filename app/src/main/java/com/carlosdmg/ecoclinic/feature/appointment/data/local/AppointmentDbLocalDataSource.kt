@@ -11,14 +11,20 @@ class AppointmentDbLocalDataSource(private val dao: AppointmentsDao) {
 
     suspend fun getAppointments(): Result<List<Appointment>> {
         val appointments = dao.findAll()
-        val lastUpdated = appointments.firstOrNull()?.updatedAt
 
         return when {
-            appointments.isNotEmpty() -> Result.success(appointments.map { it.toModel() })
-            lastUpdated != null && isCacheExpired(lastUpdated) -> Result.failure(ErrorApp.CacheExpiredErrorApp)
-            else -> Result.failure(ErrorApp.UnknownErrorApp)
-        }
+            appointments.isEmpty() -> {
+                Result.failure(ErrorApp.NoDataError)
+            }
 
+            isCacheExpired(appointments.first().updatedAt) -> {
+                Result.failure(ErrorApp.CacheExpiredErrorApp)
+            }
+
+            else -> {
+                Result.success(appointments.map { it.toModel() })
+            }
+        }
     }
 
     private fun isCacheExpired(lastUpdated: Long): Boolean {
@@ -30,6 +36,10 @@ class AppointmentDbLocalDataSource(private val dao: AppointmentsDao) {
         val entities = appointments.map { it.toEntity(currentTimeMilis) }
 
         dao.saveAll(*entities.toTypedArray())
+    }
+
+    suspend fun deleteAll() {
+        dao.deleteAll()
     }
 
 
