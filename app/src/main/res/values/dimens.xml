@@ -8,6 +8,12 @@
     <dimen name="ex_xxxxl">200dp</dimen>
     <dimen name="ex_xxxxxl">400dp</dimen>
 
+    <!-- View Appointment sizes -->
+    <dimen name="vw_appt_titles_hg">18dp</dimen>
+    <dimen name="vw_appt_header_wd">170dp</dimen>
+    <dimen name="vw_appt_type_wd">105dp</dimen>
+    <dimen name="vw_appt_timestamp_wd">80dp</dimen>
+    <dimen name="vw_appt_details_wd">55dp</dimen>
 
     <!-- Image sizes -->
     <dimen name="image_xs">16dp</dimen>

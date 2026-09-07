@@ -23,8 +23,8 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/appt_vw_header"
                 style="@style/AppHeadline"
-                android:layout_width="170dp"
-                android:layout_height="20dp"
+                android:layout_width="@dimen/vw_appt_header_wd"
+                android:layout_height="@dimen/vw_appt_titles_hg"
                 android:text="@string/appt_vw_headline"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -32,8 +32,8 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/appt_vw_type"
                 style="@style/AppSupportingText"
-                android:layout_width="105dp"
-                android:layout_height="18dp"
+                android:layout_width="@dimen/vw_appt_type_wd"
+                android:layout_height="@dimen/vw_appt_titles_hg"
                 android:layout_marginVertical="@dimen/space_m"
                 android:gravity="bottom"
                 android:text="@string/appt_vw_type"
@@ -44,8 +44,8 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/appt_vw_timestamp"
                 style="@style/AppSupportingText"
-                android:layout_width="80dp"
-                android:layout_height="18dp"
+                android:layout_width="@dimen/vw_appt_timestamp_wd"
+                android:layout_height="@dimen/vw_appt_titles_hg"
                 android:layout_marginVertical="@dimen/space_m"
                 android:gravity="bottom"
                 android:text="@string/appt_vw_timestamp"
@@ -57,8 +57,8 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/appt_vw_details"
                 style="@style/AppSupportingText"
-                android:layout_width="55dp"
-                android:layout_height="18dp"
+                android:layout_width="@dimen/vw_appt_details_wd"
+                android:layout_height="@dimen/vw_appt_titles_hg"
                 android:gravity="bottom"
                 android:text="@string/appt_vw_details"
                 app:layout_constraintBottom_toBottomOf="parent"
