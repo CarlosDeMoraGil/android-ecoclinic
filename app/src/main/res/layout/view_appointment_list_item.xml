@@ -8,6 +8,7 @@
         android:id="@+id/appt_vw_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_s"
         app:cardBackgroundColor="@color/md_theme_primaryContainer_v3"
         app:cardCornerRadius="@dimen/space_m"
         app:cardElevation="@dimen/space_xs"
@@ -22,8 +23,8 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/appt_vw_header"
                 style="@style/AppHeadline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="170dp"
+                android:layout_height="20dp"
                 android:text="@string/appt_vw_headline"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -31,9 +32,10 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/appt_vw_type"
                 style="@style/AppSupportingText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="105dp"
+                android:layout_height="18dp"
                 android:layout_marginVertical="@dimen/space_m"
+                android:gravity="bottom"
                 android:text="@string/appt_vw_type"
                 app:layout_constraintBottom_toTopOf="@id/appt_vw_type"
                 app:layout_constraintStart_toStartOf="parent"
@@ -42,9 +44,10 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/appt_vw_timestamp"
                 style="@style/AppSupportingText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="18dp"
                 android:layout_marginVertical="@dimen/space_m"
+                android:gravity="bottom"
                 android:text="@string/appt_vw_timestamp"
                 app:layout_constraintBottom_toTopOf="@id/appt_vw_details"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,8 +57,9 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/appt_vw_details"
                 style="@style/AppSupportingText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="55dp"
+                android:layout_height="18dp"
+                android:gravity="bottom"
                 android:text="@string/appt_vw_details"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -66,21 +70,17 @@
                 style="@style/TextAppearance.Material3.LabelMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/space_s"
                 android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="@id/appt_vw_type"
-                app:layout_constraintStart_toEndOf="@id/appt_vw_type"
-                app:layout_constraintTop_toTopOf="@id/appt_vw_type" />
+                app:layout_constraintStart_toEndOf="@id/appt_vw_type" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/appt_vw_timestamp_data"
                 style="@style/TextAppearance.Material3.LabelMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/space_s"
                 app:layout_constraintBottom_toBottomOf="@id/appt_vw_timestamp"
-                app:layout_constraintStart_toEndOf="@id/appt_vw_timestamp"
-                app:layout_constraintTop_toTopOf="@id/appt_vw_timestamp" />
+                app:layout_constraintStart_toEndOf="@id/appt_vw_timestamp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/appt_vw_details_data"
@@ -99,9 +99,9 @@
                 android:insetTop="@dimen/ex_zero"
                 android:insetBottom="@dimen/ex_zero"
                 android:text="@string/appt_vw_cancel"
-                android:textSize="@dimen/text_xs"
                 android:textAllCaps="false"
                 android:textColor="@color/md_theme_onSurface"
+                android:textSize="@dimen/text_xs"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.App.SmallComponent"

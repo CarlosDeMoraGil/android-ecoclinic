@@ -12,6 +12,8 @@ import com.carlosdmg.ecoclinic.app.data.FirebaseAuthentication
 import com.carlosdmg.ecoclinic.databinding.FragmentAppointmentBinding
 import com.carlosdmg.ecoclinic.feature.appointment.domain.Appointment
 import com.carlosdmg.ecoclinic.feature.appointment.presentation.adapter.AppointmentAdapter
+import com.faltenreich.skeletonlayout.Skeleton
+import com.faltenreich.skeletonlayout.applySkeleton
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -25,6 +27,7 @@ class AppointmentFragment : Fragment() {
     private lateinit var appointmentAdapter: AppointmentAdapter
 
     private val firebaseAuth: FirebaseAuthentication by inject()
+    private lateinit var skeleton: Skeleton
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,15 +48,6 @@ class AppointmentFragment : Fragment() {
 
     }
 
-    private fun setUpObserver() {
-        val observer = Observer<AppointmentsViewModel.UiState> { uiState ->
-            uiState.appointments.let { bindData(it) }
-        }
-
-        viewModel.uiState.observe(viewLifecycleOwner, observer)
-    }
-
-
     private fun setUpView() {
         binding.apply {
             apptFrRecyclerView.layoutManager = LinearLayoutManager(
@@ -64,19 +58,40 @@ class AppointmentFragment : Fragment() {
             appointmentAdapter = AppointmentAdapter()
             apptFrRecyclerView.adapter = appointmentAdapter
             apptFrToolbar.toolbar.title = getString(R.string.in_fr_toolbar_title)
+
+            skeleton = apptFrRecyclerView.applySkeleton(R.layout.view_appointment_list_item)
         }
     }
 
-    private fun bindData(appointments: List<Appointment>?){
+    private fun setUpObserver() {
+        val observer = Observer<AppointmentsViewModel.UiState> { uiState ->
+            uiState.let {
+                bindData(it.appointments)
+                setUpSkeleton(it.isLoading)
+            }
+        }
+
+        viewModel.uiState.observe(viewLifecycleOwner, observer)
+    }
+
+    private fun bindData(appointments: List<Appointment>?) {
         appointmentAdapter.submitList(appointments)
         checkAppointments(appointments)
     }
 
-    private fun checkAppointments(appointments: List<Appointment>?){
-        if(appointments?.isEmpty() == true){
+    private fun checkAppointments(appointments: List<Appointment>?) {
+        if (appointments?.isEmpty() == true) {
             binding.apptFrCard.visibility = View.VISIBLE
-        }else{
+        } else {
             binding.apptFrCard.visibility = View.GONE
+        }
+    }
+
+    private fun setUpSkeleton(isLoading: Boolean) {
+        if (isLoading) {
+            skeleton.showSkeleton()
+        } else {
+            skeleton.showOriginal()
         }
     }
 

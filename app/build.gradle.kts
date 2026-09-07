@@ -74,6 +74,8 @@ dependencies {
     implementation(libs.room.runtime)
     implementation(libs.room.coroutines)
 
+    implementation(libs.skeleton)
+
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.junit)
