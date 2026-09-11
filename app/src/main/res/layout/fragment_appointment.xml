@@ -15,7 +15,7 @@
         android:id="@+id/appt_fr_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/space_m"
+        android:layout_margin="@dimen/space_s"
         tools:itemCount="2"
         tools:listitem="@layout/view_appointment_list_item"
         app:layout_constraintTop_toBottomOf="@id/appt_fr_toolbar"/>
